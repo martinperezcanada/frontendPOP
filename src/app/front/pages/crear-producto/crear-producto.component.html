@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h2>Crear Producto</h2>
+  <form [formGroup]="createForm" (ngSubmit)="submitForm()" class="mt-4">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre del Producto:</label>
+      <input type="text" id="nombre" formControlName="nombre" class="form-control">
+      <div *ngIf="createForm.get('nombre')?.hasError('required') && (createForm.get('nombre')?.dirty || createForm.get('nombre')?.touched)" class="text-danger">
+        El nombre es requerido.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
+      <div *ngIf="createForm.get('descripcion')?.hasError('required') && (createForm.get('descripcion')?.dirty || createForm.get('descripcion')?.touched)" class="text-danger">
+        La descripción es requerida.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="precio" class="form-label">Precio:</label>
+      <input type="number" id="precio" formControlName="precio" class="form-control">
+      <div *ngIf="createForm.get('precio')?.hasError('required') && (createForm.get('precio')?.dirty || createForm.get('precio')?.touched)" class="text-danger">
+        El precio es requerido.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="imagen" class="form-label">URL de la Imagen:</label>
+      <input type="text" id="imagen" formControlName="imagen" class="form-control">
+    </div>
+    <button type="submit" [disabled]="createForm.invalid" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
+
+<app-footer></app-footer>

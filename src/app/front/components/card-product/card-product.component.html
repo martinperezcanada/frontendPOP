@@ -1,0 +1,20 @@
+<div class="product-container">
+    <div *ngFor="let product of products" class="product-card" (click)="goToProductDetail(product.id)">
+      <div class="product-image-container">
+        <img [src]="product.imagen || '/assets/default.png'" alt="Producto" class="product-image">
+      </div>
+      <div class="product-details">
+        <h2>{{ product.nombre | uppercase}}</h2>
+        <p>{{ product.descripcion }}</p>
+        <p class="product-price">{{ product.precio | currency:'EUR' }}</p>
+      </div>
+      <div class="product-actions">
+        <button (click)="modifyProduct(product.id)">Modificar</button>
+        <button (click)="deleteProduct(product.id)">Borrar</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pagination">
+    <button *ngFor="let page of getPaginationArray()" (click)="onPageChange(page)" [class.active]="currentPage === page">{{ page }}</button>
+  </div>

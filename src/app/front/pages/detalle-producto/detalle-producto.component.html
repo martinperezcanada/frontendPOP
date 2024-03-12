@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div *ngIf="product" class="product-details">
+  <div class="product-image">
+      <img [src]="product.imagen" alt="{{ product.nombre }}">
+  </div>
+  <div class="product-info">
+      <h2>{{ product.nombre }}</h2>
+      <p>{{ product.descripcion }}</p>
+      <p>Precio: {{ product.precio | currency:'EUR' }}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>
+  

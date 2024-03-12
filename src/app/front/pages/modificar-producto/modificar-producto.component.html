@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+<form [formGroup]="modifyForm" (ngSubmit)="submitModifyForm()" class="mt-4">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input type="text" id="nombre" formControlName="nombre" class="form-control">
+      <div *ngIf="modifyForm.get('nombre')?.hasError('required') && (modifyForm.get('nombre')?.dirty || modifyForm.get('nombre')?.touched)" class="text-danger">
+        El nombre es requerido.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
+      <div *ngIf="modifyForm.get('descripcion')?.hasError('required') && (modifyForm.get('descripcion')?.dirty || modifyForm.get('descripcion')?.touched)" class="text-danger">
+        La descripción es requerida.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="precio" class="form-label">Precio:</label>
+      <input type="number" id="precio" formControlName="precio" class="form-control">
+      <div *ngIf="modifyForm.get('precio')?.hasError('required') && (modifyForm.get('precio')?.dirty || modifyForm.get('precio')?.touched)" class="text-danger">
+        El precio es requerido.
+      </div>
+      <div *ngIf="modifyForm.get('precio')?.hasError('min') && (modifyForm.get('precio')?.dirty || modifyForm.get('precio')?.touched)" class="text-danger">
+        El precio debe ser mayor o igual a 0.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="modifyForm.invalid" class="btn btn-primary">Modificar Producto</button>
+  </form>
+</div>
+
+<app-footer></app-footer>

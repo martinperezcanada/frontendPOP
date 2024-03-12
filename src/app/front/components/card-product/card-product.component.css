@@ -1,0 +1,83 @@
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  width: 190px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-price {
+  margin-top: auto;
+  text-align: left;
+}
+
+.product-actions button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.product-actions button:hover {
+  background-color: #0056b3;
+}
+
+.product-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.product-actions button:last-child:hover {
+  background-color: #c82333;
+}
+
+.pagination {
+  margin-top: 50px;
+  margin-bottom: 10px; 
+}
+
+.pagination button {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #333333;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #eeeeee;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #007bff;
+}

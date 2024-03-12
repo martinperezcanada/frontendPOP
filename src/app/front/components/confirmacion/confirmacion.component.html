@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Confirmación</h1>
+<div mat-dialog-content>
+  ¿Estás seguro de que deseas eliminar este producto?
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false">Cancelar</button>
+  <button mat-button (click)="confirmAction(true)">Confirmar</button>
+</div>
+
+<div mat-dialog-content *ngIf="data">
+    <span>{{ data | personalizado }}</span>
+</div>

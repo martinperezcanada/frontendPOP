@@ -1,0 +1,13 @@
+/* Estilos específicos para el navbar */
+.navbar-brand img {
+    margin-right: 15px; /* Ajusta el margen entre el logo y el borde del navbar */
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem; /* Ajusta el padding de los iconos en el navbar */
+  }
+  
+  .btn-primary {
+    margin-left: 10px; /* Ajusta el margen izquierdo del botón "Subir" */
+  }
+  

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-filter"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" (click)="applyFilter('orderByPrice', 'asc')">Precio ascendente</a>
+                <a class="dropdown-item"  (click)="applyFilter('orderByPrice', 'desc')">Precio descendente</a>
+                <a class="dropdown-item" (click)="applyFilter('orderByPrice', 'asc')">Nombre ascendente</a>
+                <a class="dropdown-item"  (click)="applyFilter('orderByPrice', 'desc')">Nombre descendente</a>
+            </div>
+        
+    </div>    
+</div>
