@@ -8,7 +8,7 @@ import { RegisterResponse } from '../interfaces/register_response';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://backendpop.onrender.com';
 
   constructor(private http: HttpClient) { }
 

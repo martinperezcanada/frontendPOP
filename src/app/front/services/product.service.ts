@@ -7,7 +7,7 @@ import { Observable, catchError, map } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private readonly baseUrl = 'http://localhost:3000/products';
+  private readonly baseUrl = 'https://backendpop.onrender.com/products';
 
   constructor(private http: HttpClient) {}
 
